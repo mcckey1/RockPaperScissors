@@ -1,0 +1,37 @@
+﻿<div class="container">
+    <div class="row mt-5">
+        <div class="col-6 text-center text-uppercase"><h1>Human : @humanScore</h1></div>
+        <div class="col-6 text-center text-uppercase"><h1>Computer :@computerScore</h1></div>
+    </div>
+    <div class="row mt-3" style="height:200px;">
+        <div class="col-6 text-center selected-image">
+            @humanSelectedImage
+        </div>
+        <div class="col-6 text-center selected-image">
+            @computerSelectedImage
+        </div>
+    </div>
+    <div class="text-center mt-3" style="height:40px;">
+        <h3>@messageString</h3>
+    </div>
+    <div class="text-center mt-3" style="height:40px;">
+        <h3>Number of games: @gameCount</h3>
+    </div>
+    <div class="row mt-5">
+        @foreach (var (optionKey, optionImage) in GameOptions!.options)
+        {
+            <div class="@(lizardSpockExpansionEnabled ? "col-2" : "col-4") mx-auto text-center image-to-select" @onclick="(()=> OnHumanSelected(optionKey))">
+                @optionImage
+            </div>
+        }
+    </div>
+    
+    <div class="text-end mt-5">         
+        <button class="btn btn-primary pr-5" @onclick="OnExpansion">@expansionButtonString</button>
+        <button class="btn btn-primary" @onclick="OnReset">Reset</button>
+    </div>
+    <div class="text-start mt-3">
+        <input type="checkbox" @bind-value="@computerUsesLastSelection" />
+        <label>Computer uses humans last selection</label>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿.selected-image {
+    font-size: 128px;
+    text-shadow: 0 0 20px #010a12;
+}
+
+.image-to-select {
+    font-size: 64px;
+    text-shadow: 0 0 20px #010a12;
+    cursor: pointer;
+}
+
+.image-to-select:hover {
+    transform: scale(1.5);
+}
