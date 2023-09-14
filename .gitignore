@@ -39,3 +39,4 @@ Thumbs.db
 *.vsidx
 /.vs/RockPaperScissors/FileContentIndex
 /.vs
+/RockPaperScissors/bin/Debug/net6.0
