@@ -5,7 +5,7 @@ namespace RockPaperScissors.Components
     public partial class Game
     { 
         const string defaultMessage = "Please make a selection";
-        const string lizardSpockExpansion = "Lizard-Spock expansion";
+        const string lizardSpockExpansion = "Lizard-Spock";
         const string enableExpansion = $"Enable {lizardSpockExpansion}";
         const string disableExpansion = $"Disable {lizardSpockExpansion}";
 
